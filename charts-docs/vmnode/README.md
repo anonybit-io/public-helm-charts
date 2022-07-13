@@ -8,6 +8,17 @@ helm repo add anonybit https://anonybit-io.github.io/public-helm-charts
 helm install vmnode01 anonybit-public/vmnode -n vmnodes --create-namespace
 ```
 
+Deploy with params
+```commandline
+helm template vmnode11 vmnode -n vmnodes-bdika \
+--set ingress.subdomain="bdika.anonybit.io" \
+--set job.serverAddress='https://api.bdika.anonybit.io' \
+--set job.apiKey='SOME_API_KEY' --set job.amountOfKeys='1' \
+--set job.image.tag='key-generator-0.1' --set job.nid='anonybit' \
+--set "secrets[0].name=somesecret" --set "secrets[0].secretData.AMQP_HOST=hoooost"  \
+--set "secrets[0].secretData.AMQP_USER_NAME=hoooost"
+```
+
 ## Values
 
 | Key | Type | Default | Description |
@@ -87,13 +98,3 @@ helm install vmnode01 anonybit-public/vmnode -n vmnodes --create-namespace
 | service.services[0].ports[0].protocol | string | `"TCP"` |  |
 | service.services[0].ports[0].targetPort | int | `80` |  |
 
-
-```commandline
-helm template vmnode11 vmnode -n vmnodes-bdika \
---set ingress.subdomain="bdika.anonybit.io" \
---set job.serverAddress='https://api.bdika.anonybit.io' \
---set job.apiKey='SOME_API_KEY' --set job.amountOfKeys='1' \
---set job.image.tag='key-generator-0.1' --set job.nid='anonybit' \
---set "secrets[0].name=somesecret" --set "secrets[0].secretData.AMQP_HOST=hoooost"  \
---set "secrets[0].secretData.AMQP_USER_NAME=hoooost"
-```
