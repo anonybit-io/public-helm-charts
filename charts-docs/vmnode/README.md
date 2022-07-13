@@ -15,8 +15,8 @@ helm template vmnode11 vmnode -n vmnodes-bdika \
 --set job.serverAddress='https://api.bdika.anonybit.io' \
 --set job.apiKey='SOME_API_KEY' --set job.amountOfKeys='1' \
 --set job.image.tag='key-generator-0.1' --set job.nid='anonybit' \
---set "secrets[0].name=somesecret" --set "secrets[0].secretData.AMQP_HOST=hoooost"  \
---set "secrets[0].secretData.AMQP_USER_NAME=hoooost"
+--set "secrets[0].name=somesecret" --set "secrets[0].secretData.SOME_SECRET_NAME1=secret_value1"  \
+--set "secrets[0].secretData.SOME_SECRET_NAME=secret_value"
 ```
 
 ## Values
