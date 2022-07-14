@@ -11,10 +11,22 @@ helm install vmnode01 anonybit-public/vmnode -n vmnodes --create-namespace
 Deploy with params
 ```commandline
 helm template vmnode11 vmnode -n vmnodes-bdika \
---set ingress.subdomain="subdomain.for.vmnode.com" \
---set job.serverAddress='https://api.server.of.anonybit.io' \
---set job.apiKey='SOME_API_KEY' \
---set job.image.tag='key-generator-0.1' --set job.nid='NETWORK_ID'
+    --set ingress.subdomain="subdomain.for.vmnode.com" \
+    --set job.serverAddress='https://api.server.of.anonybit.io' \
+    --set job.apiKey='SOME_API_KEY' \
+    --set job.image.tag='key-generator-0.1' --set job.nid='NETWORK_ID'
+```
+
+## Autoscaling
+Autoscaling is disabled by default, to enable it, make sure that cluster has metrics-server.
+```
+--set deployment.autoscaling.enabled=true
+```
+
+To deploy [metrics-server](https://github.com/kubernetes-sigs/metrics-server)
+```commandline
+helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/
+helm upgrade --install metrics-server metrics-server/metrics-server
 ```
 
 ## Values
