@@ -34,8 +34,8 @@ helm upgrade --install metrics-server metrics-server/metrics-server
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | deployment.annotations | object | `{}` |  |
-| deployment.autoscaling.enabled | bool | `true` |  |
-| deployment.autoscaling.maxReplicas | int | `100` |  |
+| deployment.autoscaling.enabled | bool | `false` |  |
+| deployment.autoscaling.maxReplicas | int | `10` |  |
 | deployment.autoscaling.minReplicas | int | `2` |  |
 | deployment.autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
 | deployment.autoscaling.targetMemoryUtilizationPercentage | int | `80` |  |
@@ -107,4 +107,6 @@ helm upgrade --install metrics-server metrics-server/metrics-server
 | service.services[0].ports[0].port | int | `80` |  |
 | service.services[0].ports[0].protocol | string | `"TCP"` |  |
 | service.services[0].ports[0].targetPort | int | `80` |  |
+| volumes[0].emptyDir | object | `{}` |  |
+| volumes[0].name | string | `"log-storage"` |  |
 
