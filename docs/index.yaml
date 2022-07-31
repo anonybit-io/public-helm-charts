@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  anb-common-app:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-07-31T20:36:25.718057+03:00"
+    description: Commong anonybit application for Kubernetes
+    digest: 3c635a90fbcf715d0f617c7ed6f2c89676d74e10b2362f8f46e2c9f02ac687b9
+    name: anb-common-app
+    type: application
+    urls:
+    - https://anonybit-io.github.io/public-helm-charts/anb-common-app-0.0.4.tgz
+    version: 0.0.4
   vmnode:
   - apiVersion: v2
     appVersion: "1.3"
-    created: "2022-07-31T15:18:27.289987971Z"
+    created: "2022-07-31T20:36:25.721543+03:00"
     description: Deployment of vmnode
     digest: cfb6a16ec9d4177ceff4a1aab518a3d1e44d00bdf072ce0a4be444f793462b28
     name: vmnode
@@ -13,7 +24,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 1.2.1
-    created: "2022-07-14T10:15:56.299155255Z"
+    created: "2022-07-31T20:36:25.720955+03:00"
     description: Deployment of vmnode
     digest: 0332199aa9b0137b1a2048d8d5a395b2d43557d25053c1925be6a772b80f5028
     name: vmnode
@@ -23,7 +34,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.2.1
-    created: "2022-07-14T08:24:54.622973061Z"
+    created: "2022-07-31T20:36:25.71996+03:00"
     description: Deployment of vmnode
     digest: cafd46013f93fee383446bf1e8392d1d6887b7978ea689333f00ef9dafa0917f
     name: vmnode
@@ -33,7 +44,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.2.1
-    created: "2022-07-13T11:08:47.471314+03:00"
+    created: "2022-07-31T20:36:25.719342+03:00"
     description: Deployment of vmnode
     digest: fbed9ad4f52d39a193a1096c5cc5c9f8a94db7e97455d0f09af94f944ceb164f
     name: vmnode
@@ -41,4 +52,4 @@ entries:
     urls:
     - https://anonybit-io.github.io/public-helm-charts/vmnode-0.0.1.tgz
     version: 0.0.1
-generated: "2022-07-31T15:18:27.288101137Z"
+generated: "2022-07-31T20:36:25.717+03:00"
