@@ -1,16 +1,5 @@
 apiVersion: v1
 entries:
-  anb-common-app:
-  - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2022-07-31T20:36:25.718057+03:00"
-    description: Commong anonybit application for Kubernetes
-    digest: 3c635a90fbcf715d0f617c7ed6f2c89676d74e10b2362f8f46e2c9f02ac687b9
-    name: anb-common-app
-    type: application
-    urls:
-    - https://anonybit-io.github.io/public-helm-charts/anb-common-app-0.0.4.tgz
-    version: 0.0.4
   vmnode:
   - apiVersion: v2
     appVersion: "1.3"
