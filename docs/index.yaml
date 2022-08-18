@@ -3,6 +3,16 @@ entries:
   vmnode:
   - apiVersion: v2
     appVersion: "1.5"
+    created: "2022-08-18T11:08:04.180968414Z"
+    description: Deployment of vmnode
+    digest: 254cd789c2eb96df5a8af7bc005f05f043bf640b3c2a05f7557bff298d170cce
+    name: vmnode
+    type: application
+    urls:
+    - https://anonybit-io.github.io/public-helm-charts/vmnode-0.0.9.tgz
+    version: 0.0.9
+  - apiVersion: v2
+    appVersion: "1.5"
     created: "2022-08-18T10:36:44.487268677Z"
     description: Deployment of vmnode
     digest: 7680618fdfbf08b12f34b5cac56f089bbdf8f1b5b6d2e83fa0caf8c484279fe3
@@ -81,4 +91,4 @@ entries:
     urls:
     - https://anonybit-io.github.io/public-helm-charts/vmnode-0.0.1.tgz
     version: 0.0.1
-generated: "2022-08-18T10:36:44.485588579Z"
+generated: "2022-08-18T11:08:04.180037304Z"
